@@ -1,4 +1,4 @@
-
+package Coding;
 public class BinarySearchTree {
 	private Node tree;
 
