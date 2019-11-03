@@ -1,2 +1,2 @@
 # Coding
-Coding log
+算法练习日志
