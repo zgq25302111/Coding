@@ -7,7 +7,7 @@ public class LC_climbStairs {
 
 	public static void main(String[] args) {
 		LC_climbStairs lc = new LC_climbStairs();
-		System.out.println(lc.climbStairs(10));
+		System.out.println(lc.climbStairs2(10));
 	}
 
 	public int climbStairs2(int n) {
@@ -20,7 +20,7 @@ public class LC_climbStairs {
 			if (map.containsKey(n)) {
 				return map.get(n);
 			} else {
-				map.put(n, climbStairs(n - 1) + climbStairs(n - 2));
+				map.put(n, climbStairs2(n - 1) + climbStairs2(n - 2));
 				return map.get(n);
 			}
 		}
