@@ -1,5 +1,6 @@
-package Coding;
-
+/**
+ * @author Zer0
+ */
 public class LC_mySqrt {
 	public static void main(String[] args) {
 		LC_mySqrt lc = new LC_mySqrt();
@@ -8,22 +9,25 @@ public class LC_mySqrt {
 	//牛顿法
 	public double mySqrt(double x) {
 		double r = x;
-	    while (r*r > x)
-	        r = (r + x/r) / 2;
+	    while (r*r > x){
+			r = (r + x/r) / 2;
+		}
 	    return r;
 	}
 	//以下标准答案  牛顿法超时 二分法算不对
 	public int mySqrt4(int x) {
-	    if (x == 0)
-	        return 0;
+	    if (x == 0){
+			return 0;
+		}
 	    int left = 1, right = Integer.MAX_VALUE;
 	    while (true) {
 	        int mid = left + (right - left)/2;
 	        if (mid > x/mid) {
 	            right = mid - 1;
 	        } else {
-	            if (mid + 1 > x/(mid + 1))
-	                return mid;
+	            if (mid + 1 > x/(mid + 1)){
+					return mid;
+				}
 	            left = mid + 1;
 	        }
 	    }
@@ -77,6 +81,6 @@ public class LC_mySqrt {
 			}
 			mid = low + (high - low) / 2;
 		}
-		return mid;
+		return mid;//2019.12.22 11:45:00
 	}
 }
